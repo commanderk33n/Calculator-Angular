@@ -1,0 +1,44 @@
+.calculator {
+    border: 1px solid white;
+    border-radius: 5px;
+    position: center;
+    width:800px;
+    margin:0 auto;
+  }
+
+  .calculatorScreen {
+    width: 100%;
+    font-size: 5rem;
+    background-color: black;
+    color: white;
+    text-align: right;
+    margin-bottom: 5px;
+  }
+
+  .calculationType {
+    color: blue;
+    background-color: green;
+  }
+
+  button {
+    height: 60px;
+    background-color: pink;
+    font-size: 2rem;
+    color: black;
+  }
+
+  .calculatorButtons {
+    display: grid;
+    grid-gap: 20px;
+  }
+
+  .equal {
+    background-color: blue;
+    color: white;
+    height: 100%;
+    grid-area: 2 / 4 / 6 / 5;
+  }
+
+  .allClear {
+    background-color: firebrick;
+  }

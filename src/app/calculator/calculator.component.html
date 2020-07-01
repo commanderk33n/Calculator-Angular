@@ -1,0 +1,29 @@
+<div class="calculator">
+
+    <input type="text" class="calculatorScreen" [value]="currentValue" disabled/>
+  
+    <div class="calculatorButtons">
+  
+      <button type="button" (click)="getCalculationType('+')" class="calculationType" value="+">+</button>
+      <button type="button" (click)="getCalculationType('-')" class="calculationType" value="-">-</button>
+      <button type="button" (click)="getCalculationType('*')" class="calculationType" value="*">*</button>
+      <button type="button" (click)="getCalculationType('/')" class="calculationType" value="/">/</button>
+      
+  
+      <button type="button" (click)="getValue('1')" value="1">1</button>
+      <button type="button" (click)="getValue('2')" value="2">2</button>
+      <button type="button" (click)="getValue('3')" value="3">3</button>
+      <button type="button" (click)="getValue('4')" value="4">4</button>
+      <button type="button" (click)="getValue('5')" value="5">5</button>
+      <button type="button" (click)="getValue('6')" value="6">6</button>
+      <button type="button" (click)="getValue('7')" value="7">7</button>
+      <button type="button" (click)="getValue('8')" value="8">8</button>
+      <button type="button" (click)="getValue('9')" value="9">9</button>
+      <button type="button" (click)="getValue('0')" value="0">0</button>
+  
+      <button type="button" (click)="getCalculationType('%')" class="calculationType" value="%">%</button>
+      <button type="button" (click)="clear()" class="allClear" value="allClear">AC</button>
+      <button type="button" (click)="getCalculationType('=')" class="equal" value="=">=</button>
+  
+    </div>
+  </div>
