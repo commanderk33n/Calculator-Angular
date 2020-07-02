@@ -20,9 +20,13 @@ export class CalculatorComponent implements OnInit {
   }
 
   public getValue(v: string) {
-  
-  
-     if (this.currentValue === '0') {
+   // console.log(this.currentValue);
+   console.log(this.waitForMultiDigit);
+   if (this.waitForMultiDigit === true) {
+      
+    this.currentValue = v;
+    this.waitForMultiDigit = false; }
+     else if (this.currentValue === '0') {
       this.currentValue = v;
     } else {
       this.currentValue += v;
