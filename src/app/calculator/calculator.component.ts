@@ -20,13 +20,9 @@ export class CalculatorComponent implements OnInit {
   }
 
   public getValue(v: string) {
-   // console.log(this.currentValue);
-   console.log(this.waitForMultiDigit);
-    if (this.waitForMultiDigit === true) {
-      console.log("test");
-      this.currentValue = v;
-      this.waitForMultiDigit = false;
-    } else if (this.currentValue === '0') {
+  
+  
+     if (this.currentValue === '0') {
       this.currentValue = v;
     } else {
       this.currentValue += v;
@@ -63,9 +59,7 @@ export class CalculatorComponent implements OnInit {
   }
 
   public getCalculationType(calc: string) {
-    //console.log(this.firstValue);
-    // console.log(calc);
-    //console.log(this.calculationType);
+    
     console.log(this.firstValue);
     if (this.firstValue === null) {
       this.firstValue = Number(this.currentValue);
