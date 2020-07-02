@@ -33,6 +33,29 @@ export class CalculatorComponent implements OnInit {
     }
   }
 
+  public getCalculationType(calc: string) {
+
+    console.log(this.firstValue);
+    if (this.firstValue === null) {
+      this.firstValue = Number(this.currentValue);
+    } else if (this.calculationType != null) {
+      this.result = this.doCalculation(this.calculationType, Number(this.currentValue))
+      this.currentValue = String(this.result);
+      this.firstValue = this.result;
+      console.log(this.result);
+    }
+    this.calculationType = calc;
+    this.waitForSecondValue = true;
+  }
+
+  public clear() {
+    this.currentValue = '0';
+    this.firstValue = null;
+    this.calculationType = null;
+    this.result = null;
+    this.waitForSecondValue = false;
+  }
+
   public doCalculation(calc, secondValue) {
 
     switch (calc) {
@@ -62,26 +85,5 @@ export class CalculatorComponent implements OnInit {
 
   }
 
-  public getCalculationType(calc: string) {
 
-    console.log(this.firstValue);
-    if (this.firstValue === null) {
-      this.firstValue = Number(this.currentValue);
-    } else if (this.calculationType != null) {
-      this.result = this.doCalculation(this.calculationType, Number(this.currentValue))
-      this.currentValue = String(this.result);
-      this.firstValue = this.result;
-      console.log(this.result);
-    }
-    this.calculationType = calc;
-    this.waitForSecondValue = true;
-  }
-
-  public clear() {
-    this.currentValue = '0';
-    this.firstValue = null;
-    this.calculationType = null;
-    this.result = null;
-    this.waitForSecondValue = false;
-  }
 }
